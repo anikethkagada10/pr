@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Princess Day Card for Vanshitha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            overflow: hidden;
+        }
+
+        .page {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: opacity 0.8s ease;
+        }
+
+        /* Background */
+        #page1 {
+            background: linear-gradient(135deg, #ffd1dc, #ff9aae);
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #page1 h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        #page1 h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        #messageBox {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 85%;
+            font-size: 1.1rem;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #fff;
+            color: #ee409a;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: #ffe6f2;
+        }
+
+        /* Page 2 */
+
+        #page2 {
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            opacity: 0;
+            pointer-events: none;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #page2 h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #fff;
+        }
+            .animatedText {
+            animation: glow 2s infinite ease-in-out;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #fff; }
+            50% { text-shadow: 0 0 20px #ffe6fa; }
+            100% { text-shadow: 0 0 5px #fff; }
+        }
+        /* Bouquet image only — CSS animation removed */
+        #bouquet {
+            width: 70%;
+            max-width: 280px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 18px;
+        }
+
+        .r1 { left: 90px; top: 10px; }
+        .r2 { left: 40px; top: 40px; }
+        .r3 { right: 40px; top: 40px; }
+
+        @keyframes bloom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .l1 { left: 30px; transform: rotate(-30deg); }
+        .l2 { right: 30px; transform: rotate(30deg); }
+
+                /* Responsive Spotify Player */
+        .musicBox {
+            width: 90%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        .spotifyPlayer {
+            width: 100%;
+            height: 85px;
+            border-radius: 12px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            body { overflow-y: auto; }
+            .page { padding: 20px; height: auto; min-height: 100vh; }
+            #page1 h1 { font-size: 1.8rem; }
+            #page1 h2 { font-size: 1.2rem; }
+            #messageBox { font-size: 0.95rem; padding: 15px; max-width: 100%; }
+            .spotifyPlayer { height: 95px; }
+            #bouquet { width: 85% !important; height: auto !important; }
+            #page2 h2 { font-size: 1.3rem; }
+        }
+            #page1 h2 { font-size: 1.2rem; }
+            #messageBox { font-size: 0.95rem; padding: 15px; }
+            .spotifyPlayer { height: 75px; }
+            #bouquet { width: 70%; }
+            #page2 h2 { font-size: 1.4rem; }
+        }
+                /* FULL MOBILE RESPONSIVE FIX */
+        * { box-sizing: border-box; }
+
+        body { overflow-y: auto; }
+
+        .page {
+            width: 100%;
+            height: auto;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        #messageBox {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .musicBox {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        #bouquet {
+            width: 80% !important;
+            height: auto !important;
+        }
+
+        iframe.spotifyPlayer {
+            width: 100% !important;
+            height: 90px !important;
+        }
+
+        @media (max-width: 450px) {
+            #page2 { padding: 15px; }
+            #bouquet { width: 90%; max-width: 240px; }
+            #page2 h2 { font-size: 1.2rem; margin-top: 10px; }
+        }
+            #page1 h2 { font-size: 1.1rem; }
+            #page2 h2 { font-size: 1.2rem; }
+            #bouquet { width: 95% !important; }
+        }
+
+        </style>
+</head>
+<body>
+    <!-- PAGE 1 -->
+    <div id="page1" class="page">
+        <h1 class="animatedText">Happy Princess Day ✨</h1>
+        <h2 class="animatedText"> My Dear Vanshitha ji 👑</h2>
+
+        <div id="messageBox">
+            Today is your day, Princess. Your smile is my peace, your happiness is my priority. I may not be perfect, but my care for you always is. You deserve all the softness, love, and magic in this world.
+            <br><br>
+            And on this Princess Day… I just want to remind you how precious you are to me. 💖
+        </div>
+
+        <!-- Spotify Music -->
+        <!-- Spotify Music (Responsive + You can change the link) -->
+        <div class="musicBox">
+            <iframe class="spotifyPlayer" style="border-radius:12px" src="https://open.spotify.com/embed/track/1CsRoIeHaHRysPMoEaKRoQ?utm_source=generator" width="100%" height="85" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <button onclick="nextPage()">Next Surprise →</button>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div id="page2" class="page">
+        <img id="bouquet" src="https://t3.ftcdn.net/jpg/03/07/67/92/360_F_307679277_Z8hTGa8Iku4wQob0u57Yx9SYVJaQeAH4.jpg" alt="" style="width:240px; border-radius:18px; box-shadow:0 0 25px rgba(255,100,150,0.5);"/>
+        <h2>Real toh nahi de skha... 💐<br>Par dil se diya hai Princess ❤️</h2>
+    </div>
+            <div class="rose r3"></div>
+            <div class="leaf l1"></div>
+            <div class="leaf l2"></div>
+            <div class="stemBundle"></div>
+            <div class="ribbonBow"></div>
+        </div>
+            <div class="stem"></div>
+            <div class="stem right"></div>
+            <div class="ribbon"></div>
+            <div class="flower center"></div>
+            <div class="flower left"></div>
+            <div class="flower right"></div>
+        </div>
+        <h2>Real toh nahi de skha... 💐<br>Par dil se diya hai ❤️</h2>
+    </div>
+
+    <script>
+        function nextPage(){
+            document.getElementById('page1').style.opacity = 0;
+            setTimeout(()=>{
+                document.getElementById('page1').style.display = 'none';
+
+                const p2 = document.getElementById('page2');
+                p2.style.opacity = 1;
+                p2.style.pointerEvents = 'all';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
